@@ -1,0 +1,20 @@
+<nav>
+  <ul>
+    <li>
+      <span>Who We Are</span>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.folder == 'who-we-are' %}
+        <li>
+          <a href="{{site.baseurl}}/who-we-are/{{page.link}}">{{page.title}}</a>
+        </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    <li>What We Do</li>
+    <li>Get Involved</li>
+    <li>Sponsor</li>
+    <li>Donate</li>
+  </ul>
+</nav>
