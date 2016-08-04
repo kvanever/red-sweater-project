@@ -6,15 +6,43 @@
         {% for page in site.pages %}
           {% if page.folder == 'who-we-are' %}
         <li>
-          <a href="{{site.baseurl}}/who-we-are/{{page.link}}">{{page.title}}</a>
+          <a href="{{ site.baseurl }}/who-we-are/{{ page.link }}">{{page.title}}</a>
         </li>
           {% endif %}
         {% endfor %}
       </ul>
     </li>
     <li>What We Do</li>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.folder == 'what-we-do' %}
+        <li>
+          <a href="{{ site.baseurl }}/what-we-do/{{ page.link }}">{{page.title}}</a>
+        </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
     <li>Get Involved</li>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.folder == 'get-involved' %}
+        <li>
+          <a href="{{ site.baseurl }}/get-involved/{{ page.link }}">{{page.title}}</a>
+        </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
     <li>Sponsor</li>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.folder == 'sponsor' %}
+        <li>
+          <a href="{{ site.baseurl }}/sponsor/{{ page.link }}">{{page.title}}</a>
+        </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
     <li>Donate</li>
+    <li>Contact</li>
   </ul>
 </nav>

@@ -1,0 +1,9 @@
+<ul>
+  {% for page in site.pages %}
+    {% if page.folder == {{ include.folder }} %}
+  <li>
+    <a href="{{ site.baseurl }}/{{ include.folder }}/{{ page.link }}">{{include.title}}</a>
+  </li>
+    {% endif %}
+  {% endfor %}
+</ul>
