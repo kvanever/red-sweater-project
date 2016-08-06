@@ -3,20 +3,21 @@ footer.site-footer
   display: flex
   align-items: center
   height: 100px
+  @extend %navigation-label
   color: $white
+  line-height: 20px
   .site-footer__company-info
     flex: 1 1 25%
     justify-content: flex-start
   nav
     display: flex
     flex: 1 1 50%
-    @extend %navigation-label
     ul
       height: 60px
       width: 100%
-      line-height: 20px
       display: flex
       flex-flow: column wrap
       li
         margin-right: $space
-        
+    .site-footer__nav--social-media
+      display: flex
