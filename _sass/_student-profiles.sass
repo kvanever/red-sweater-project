@@ -1,0 +1,21 @@
+.student-profiles
+  @extend %section
+  color: $gray
+  h2
+    @extend %section-header
+  p
+    @extend %paragraph
+  .show
+    color: $blue
+    font-weight: 600
+    text-transform: uppercase
+    margin-bottom: 8%
+  img
+    width: 100%
+    padding: 5% 0
+    &:nth-of-type(n-1)
+      border-top: 2px solid $yellow
+  h3
+    @extend %quote
+  .hide
+    display: none
