@@ -1,7 +1,7 @@
 <nav>
   <ul>
     <li {% if page.folder == 'who-we-are' %}class="active"{% endif %}>
-      <span>Who We Are</span>
+      <a href="/who-we-are">Who We Are</a>
       <ul>
         {% for page in site.pages %}
           {% if page.folder == 'who-we-are' %}
@@ -12,7 +12,8 @@
         {% endfor %}
       </ul>
     </li>
-    <li>What We Do
+    <li {% if page.folder == 'what-we-do' %}class="active"{% endif %}>
+      <a href="/what-we-do">What We Do</a>
       <ul>
         {% for page in site.pages %}
           {% if page.folder == 'what-we-do' %}
@@ -23,7 +24,8 @@
         {% endfor %}
       </ul
     </li>
-    <li>Get Involved</li>
+    <li {% if page.folder == 'get-involved' %}class="active"{% endif %}>
+      <a href="/get-involved">Get Involved</a>
       <ul>
         {% for page in site.pages %}
           {% if page.folder == 'get-involved' %}
@@ -33,7 +35,9 @@
           {% endif %}
         {% endfor %}
       </ul>
-    <li>Sponsor</li>
+    </li>
+    <li {% if page.folder == 'sponsor' %}class="active"{% endif %}>
+      <a href="/sponsor">Sponsor</a>
       <ul>
         {% for page in site.pages %}
           {% if page.folder == 'sponsor' %}
@@ -43,7 +47,8 @@
           {% endif %}
         {% endfor %}
       </ul>
-    <li>Donate</li>
-    <li>Contact</li>
+    </li>
+    <li {% if page.folder == 'donate' %}class="active"{% endif %}><a href="/donate">Donate</a></li>
+    <li {% if page.folder == 'contact' %}class="active"{% endif %}><a href="/contact">Contact</a></li>
   </ul>
 </nav>
