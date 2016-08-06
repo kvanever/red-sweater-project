@@ -6,16 +6,29 @@ header
   .logo
     flex: 1 1 50%
     justify-content: flex-start
+    @media screen and (min-width: $medium-breakpoint) and (max-width: $large-breakpoint)
+      flex: 1 1 25%
+    @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+      flex: 1 1 50%
   nav
     flex: 1 1 50%
     @extend %navigation-label
     color: $gray
+    @media screen and (min-width: $medium-breakpoint) and (max-width: $large-breakpoint)
+      flex: 1 1 75%
+    @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+      flex: 1 1 50%
     &>ul
       display: flex
       flex: 1 1 auto
       justify-content: space-between
+      @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+        flex: 1 1 50%
       li
         display: flex
+        @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+          &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4),
+            display: none
       ul
         display: none
     .contact
