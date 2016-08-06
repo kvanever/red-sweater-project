@@ -1,0 +1,13 @@
+
+
+.intro-text {
+  h2 {
+    @extend %section-header;
+  }
+  p {
+    @extend %paragraph;
+  }
+  button {
+    @extend %navigation-label;
+  }
+}
