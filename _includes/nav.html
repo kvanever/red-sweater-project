@@ -1,6 +1,6 @@
 <nav>
   <ul>
-    <li>
+    <li {% if page.folder == 'who-we-are' %}class="active"{% endif %}>
       <span>Who We Are</span>
       <ul>
         {% for page in site.pages %}
@@ -12,7 +12,7 @@
         {% endfor %}
       </ul>
     </li>
-    <li>What We Do</li>
+    <li>What We Do
       <ul>
         {% for page in site.pages %}
           {% if page.folder == 'what-we-do' %}
@@ -21,7 +21,8 @@
         </li>
           {% endif %}
         {% endfor %}
-      </ul>
+      </ul
+    </li>
     <li>Get Involved</li>
       <ul>
         {% for page in site.pages %}
