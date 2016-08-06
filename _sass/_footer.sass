@@ -6,18 +6,33 @@ footer.site-footer
   @extend %navigation-label
   color: $white
   line-height: 20px
+  @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+    flex-flow: column nowrap
+    height: auto
+    text-align: center
   .site-footer__company-info
     flex: 1 1 25%
     justify-content: flex-start
+    @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+      flex: auto
+      width: 100%
   nav
     display: flex
     flex: 1 1 50%
+    @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+      flex: auto
+      width: 100%
+      flex-direction: column
     ul
       height: 60px
       width: 100%
       display: flex
       flex-flow: column wrap
+      @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+        height: auto
+        flex: auto
+        width: 100%
       li
         margin-right: $space
-    .site-footer__nav--social-media
-      display: flex
+        @media screen and (min-width: $small-breakpoint) and (max-width: $medium-breakpoint)
+          margin-right: 0
