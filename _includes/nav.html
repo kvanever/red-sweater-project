@@ -48,7 +48,8 @@
         {% endfor %}
       </ul>
     </li>
-    <li {% if page.folder == 'donate' %}class="active"{% endif %}><a href="/donate">Donate</a></li>
-    <li {% if page.folder == 'contact' %}class="active"{% endif %}><a href="/contact">Contact</a></li>
+    <li class="donate{% if page.folder == 'donate' %} active{% endif %}"><a href="/donate">Donate</a></li>
+    <li class="contact{% if page.folder == 'contact' %} active{% endif %}"><a href="/contact">Contact</a></li>
+    <li><a href="#"><i class="menu fa fa-bars" aria-hidden="true"></i></a></li>
   </ul>
 </nav>

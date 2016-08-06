@@ -1,0 +1,29 @@
+header
+  display: flex
+  margin: 0 $space
+  height: 60px
+  align-items: center
+  .logo
+    flex: 1 1 50%
+    justify-content: flex-start
+  nav
+    flex: 1 1 50%
+    @extend %navigation-label
+    color: $gray
+    &>ul
+      display: flex
+      flex: 1 1 auto
+      justify-content: space-between
+      li
+        display: flex
+      ul
+        display: none
+    .contact
+      display: none
+    .donate
+      background-color: $red
+      border-radius: 5px
+      color: $white
+      padding: 0 $space
+    i.menu
+      font-size: 30px
