@@ -1,15 +1,23 @@
 footer.site-footer
+  background-color: $black
   display: flex
-  margin: 0 $space
-  height: 105px
   align-items: center
+  height: 100px
+  @extend %navigation-label
   color: $white
+  line-height: 20px
   .site-footer__company-info
     flex: 1 1 25%
     justify-content: flex-start
   nav
+    display: flex
     flex: 1 1 50%
-    @extend %navigation-label
-  .site-footer__social-media
-  i
-    font-size: 30px
+    ul
+      height: 60px
+      width: 100%
+      display: flex
+      flex-flow: column wrap
+      li
+        margin-right: $space
+    .site-footer__nav--social-media
+      display: flex
