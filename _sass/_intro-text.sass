@@ -1,0 +1,18 @@
+
+
+.intro-text
+  // display: flex
+  // flex-direction: column
+  @extend %section
+  h2
+    @extend %section-header
+  p
+    @extend %paragraph
+    &:nth-of-type(2)
+      margin-bottom: 8%
+  button
+    @extend %navigation-label
+    width: 100%
+    height: 40px
+    background-color: $blue
+    color: $white
