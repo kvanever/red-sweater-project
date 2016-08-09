@@ -1,7 +1,7 @@
 header
   display: flex
   margin: 0 $space
-  height: 60px
+  height: 72px
   align-items: center
   .logo
     flex: 1 1 50%
@@ -10,20 +10,31 @@ header
     flex: 1 1 50%
     @extend %navigation-label
     color: $gray
+    height: 100%
     &>ul
       display: flex
-      flex: 1 1 auto
       justify-content: space-between
+      align-items: center
+      height: 100%
       li
         display: flex
+        flex: 1 1 auto
+        justify-content: center
+        align-items: center
+        height: 100%
+        &.active
+          border-top: 2px solid $red
+          color: $red
       ul
         display: none
     .contact
       display: none
-    .donate
+    .donate a
       background-color: $red
-      border-radius: 5px
+      border-radius: 3px
       color: $white
-      padding: 0 $space
-    i.menu
-      font-size: 30px
+      padding: $space
+    .menu
+      padding-left: $space * 2
+      img
+        width: 35px
