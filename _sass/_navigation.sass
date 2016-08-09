@@ -8,7 +8,7 @@ header
     justify-content: flex-start
     @include media($medium, $desktop)
       flex: 1 1 25%
-    @include media($tablet, $medium)
+    @include media($small, $medium)
       flex: 1 1 16.66666666666%
   nav
     flex: 1 1 50%
@@ -17,8 +17,11 @@ header
     height: 100%
     @include media($medium, $desktop)
       flex: 1 1 75%
-    @include media($tablet, $medium)
+    @include media($small, $medium)
       flex: 1 1 83.3333333333333%
+    @include media(0, $small)
+      .who-we-are, .what-we-do, .get-involved, .sponsor
+        display: none
     &>ul
       display: flex
       justify-content: space-between
@@ -30,9 +33,15 @@ header
         justify-content: center
         align-items: center
         height: 100%
+        a
+          padding: $space 0
         &.active
           border-top: 2px solid $red
           color: $red
+          @include media($small, $medium)
+            border-top: none
+            a
+              border-bottom: 3px solid $red
       ul
         display: none
     .contact

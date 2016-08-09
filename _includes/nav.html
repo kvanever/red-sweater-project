@@ -1,6 +1,6 @@
 <nav>
   <ul>
-    <li {% if page.folder == 'who-we-are' %}class="active"{% endif %}>
+    <li class="who-we-are {% if page.folder == 'who-we-are' %}active{% endif %}">
       <a href="/who-we-are/the-red-sweater">Who We Are</a>
       <ul>
         {% for page in site.pages %}
@@ -12,7 +12,7 @@
         {% endfor %}
       </ul>
     </li>
-    <li {% if page.folder == 'what-we-do' %}class="active"{% endif %}>
+    <li class="what-we-do {% if page.folder == 'what-we-do' %}active{% endif %}">
       <a href="/what-we-do/the-school">What We Do</a>
       <ul>
         {% for page in site.pages %}
@@ -24,7 +24,7 @@
         {% endfor %}
       </ul
     </li>
-    <li {% if page.folder == 'get-involved' %}class="active"{% endif %}>
+    <li class="get-involved {% if page.folder == 'get-involved' %}active{% endif %}">
       <a href="/get-involved/donate">Get Involved</a>
       <ul>
         {% for page in site.pages %}
@@ -36,7 +36,7 @@
         {% endfor %}
       </ul>
     </li>
-    <li {% if page.folder == 'sponsor' %}class="active"{% endif %}>
+    <li class="sponsor {% if page.folder == 'sponsor' %}active{% endif %}">
       <a href="/sponsor/sponsor-a-student">Sponsor</a>
       <ul>
         {% for page in site.pages %}
