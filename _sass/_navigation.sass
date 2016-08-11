@@ -1,17 +1,21 @@
 header
   display: flex
-  margin: 0 $space
+  position: relative
   height: 72px
   align-items: center
   .logo
     flex: 1 1 50%
     justify-content: flex-start
+    margin: $space 0 $space $space
+    img
+      height: 32px
     @include media($medium, $desktop)
       flex: 1 1 25%
     @include media($small, $medium)
       flex: 1 1 16.66666666666%
-  nav
+  nav#main-navigation
     flex: 1 1 50%
+    margin: $space $space $space 0
     @extend %navigation-label
     color: $gray
     height: 100%
@@ -46,8 +50,41 @@ header
       background-color: $red
       border-radius: 3px
       color: $white
-      padding: $space
+      padding: 10px 12px
     .menu
-      padding-left: $space * 2
       img
-        width: 35px
+        width: 34px
+        height: 40px
+
+nav#sub-navigation
+  position: absolute
+  top: 72px
+  left: 0px
+  width: 100%
+  background-color: $black
+  opacity: 0.9
+  height: 328px
+  display: flex
+  justify-content: center
+  .sub-navigation__container
+    margin: 0 8.333333333333333%
+    display: flex
+    justify-content: space-around
+    flex: 1 1 auto
+  .sub-navigation--column
+    display: flex
+    flex-direction: column
+  h2
+    font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 22px
+    color: $yellow
+    margin-top: $space * 2
+  ul
+    color: $white
+    font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
+    font-weight: 400
+    font-size: 16px
+    li
+      margin-top: $space

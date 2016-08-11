@@ -1,56 +1,60 @@
-<nav>
-  <div class="who-we-are">
-    <h2>Who We Are</h2>
-    <ul>
-      {% for page in site.pages %}
-        {% if page.folder == 'who-we-are' %}
-      <li>
-        <a href="{{ site.baseurl }}/who-we-are/{{ page.link }}">{{page.title}}</a>
-      </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="what-we-do">
-    <h2>What We Do</h2>
-    <ul>
-      {% for page in site.pages %}
-        {% if page.folder == 'what-we-do' %}
-      <li>
-        <a href="{{ site.baseurl }}/what-we-do/{{ page.link }}">{{page.title}}</a>
-      </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="get-involved">
-    <h2>Get Involved</h2>
-    <ul>
-      {% for page in site.pages %}
-        {% if page.folder == 'get-involved' %}
-      <li>
-        <a href="{{ site.baseurl }}/get-involved/{{ page.link }}">{{page.title}}</a>
-      </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="sponsor">
-    <h2>Sponsor</h2>
-    <ul>
-      {% for page in site.pages %}
-        {% if page.folder == 'sponsor' %}
-      <li>
-        <a href="{{ site.baseurl }}/sponsor/{{ page.link }}">{{page.title}}</a>
-      </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="donate"
-    <h2><a href="/donate">Donate</a></h2>
-  </div>
-  <div class="contact"
-    <h2><a href="/contact">Contact</a></h2>
+<nav id="sub-navigation">
+  <div class="sub-navigation__container">
+    <div class="who-we-are">
+      <h2>Who We Are</h2>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.folder == 'who-we-are' %}
+        <li>
+          <a href="{{ site.baseurl }}/who-we-are/{{ page.link }}">{{page.title}}</a>
+        </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="what-we-do">
+      <h2>What We Do</h2>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.folder == 'what-we-do' %}
+        <li>
+          <a href="{{ site.baseurl }}/what-we-do/{{ page.link }}">{{page.title}}</a>
+        </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="get-involved">
+      <h2>Get Involved</h2>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.folder == 'get-involved' %}
+        <li>
+          <a href="{{ site.baseurl }}/get-involved/{{ page.link }}">{{page.title}}</a>
+        </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="sub-navigation--column">
+      <div class="sponsor">
+        <h2>Sponsor</h2>
+        <ul>
+          {% for page in site.pages %}
+            {% if page.folder == 'sponsor' %}
+          <li>
+            <a href="{{ site.baseurl }}/sponsor/{{ page.link }}">{{page.title}}</a>
+          </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="donate">
+        <h2><a href="/donate">Donate</a></h2>
+      </div>
+      <div class="contact">
+        <h2><a href="/contact">Contact</a></h2>
+      </div>
+    </div>
   </div>
 </nav>
