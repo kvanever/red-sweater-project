@@ -2,54 +2,21 @@
   <ul>
     <li class="who-we-are {% if page.folder == 'who-we-are' %}active{% endif %}">
       <a href="/who-we-are/the-red-sweater">Who We Are</a>
-      <ul>
-        {% for page in site.pages %}
-          {% if page.folder == 'who-we-are' %}
-        <li>
-          <a href="{{ site.baseurl }}/who-we-are/{{ page.link }}">{{page.title}}</a>
-        </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
     </li>
     <li class="what-we-do {% if page.folder == 'what-we-do' %}active{% endif %}">
       <a href="/what-we-do/the-school">What We Do</a>
-      <ul>
-        {% for page in site.pages %}
-          {% if page.folder == 'what-we-do' %}
-        <li>
-          <a href="{{ site.baseurl }}/what-we-do/{{ page.link }}">{{page.title}}</a>
-        </li>
-          {% endif %}
-        {% endfor %}
-      </ul
     </li>
     <li class="get-involved {% if page.folder == 'get-involved' %}active{% endif %}">
       <a href="/get-involved/donate">Get Involved</a>
-      <ul>
-        {% for page in site.pages %}
-          {% if page.folder == 'get-involved' %}
-        <li>
-          <a href="{{ site.baseurl }}/get-involved/{{ page.link }}">{{page.title}}</a>
-        </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
     </li>
     <li class="sponsor {% if page.folder == 'sponsor' %}active{% endif %}">
       <a href="/sponsor/sponsor-a-student">Sponsor</a>
-      <ul>
-        {% for page in site.pages %}
-          {% if page.folder == 'sponsor' %}
-        <li>
-          <a href="{{ site.baseurl }}/sponsor/{{ page.link }}">{{page.title}}</a>
-        </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
     </li>
-    <li class="donate{% if page.folder == 'donate' %} active{% endif %}"><a href="/donate">Donate</a></li>
-    <li class="contact{% if page.folder == 'contact' %} active{% endif %}"><a href="/contact">Contact</a></li>
-    <li class="menu"><a href="#"><img src="/images/menu_icon.svg" alt="menu icon" /></a></li>
+    <li class="donate{% if page.folder == 'donate' %} active{% endif %}">
+      <a href="/donate">Donate</a>
+    </li>
+    <li class="menu">
+      <a href="#"><img src="/images/menu_icon.svg" alt="menu icon" /></a>
+    </li>
   </ul>
 </nav>
