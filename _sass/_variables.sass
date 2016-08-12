@@ -7,6 +7,7 @@ $gray: rgb(111, 111, 110)
 $dark-gray: rgb(40, 40, 40)
 $white: rgb(255, 255, 255)
 $black: rgb(27, 27, 27)
+$shadow-black: #515151
 
 // BREAKPOINTS
 
@@ -27,10 +28,14 @@ $phone: 320px
 
 %title
   font-family: 'Amatic SC', cursive
-  font-size: 2em
+  font-size: 44pt
   line-height: 66px
-  color: #fffff
-  background-color: transparentize($black, .8)
+  color: $white
+  text-align: center
+  background-color: transparentize($shadow-black, .8)
+  @media screen and (min-width: $tablet)
+    font-size: 35pt
+    text-align: left
 
 %quote
   font-family: 'Amatic SC', cursive
@@ -49,8 +54,8 @@ $phone: 320px
   margin: 5% 0
 
 %paragraph
-  font-size: 16px
-  line-height: 22px
+  font-size: 22px
+  line-height: 25px
   font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
   font-weight: 400
   margin-bottom: 2%
@@ -63,14 +68,15 @@ $phone: 320px
   border-radius: 3px
   letter-spacing: 0px
   border: none
-
 %ordered-list
   font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
-  font-weight: 400
-  font-size: 16px
-  line-height: 16px
+  font-weight: 500
+  font-size: 20px
+  line-height: 22px
   text-transform: uppercase
   margin-bottom: 2%
+  @media screen and (min-width: $tablet)
+    margin-top: 10%
 
 %split-box-header
   text-transform: uppercase
