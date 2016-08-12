@@ -2,8 +2,11 @@
   <img class="arrow" src="/images/triangle.svg" alt="black arrow" />
   <i class="close-menu">X</i>
   <div class="sub-navigation__container">
-    <div class="who-we-are">
+    <div class="sub-navigation--section who-we-are">
       <h2>Who We Are</h2>
+      <i class="yellow-triangle">
+        <img src="/images/yellow-triangle.svg" alt="yellow triangle" />
+      </i>
       <ul>
         {% for page in site.pages %}
           {% if page.folder == 'who-we-are' %}
@@ -14,8 +17,11 @@
         {% endfor %}
       </ul>
     </div>
-    <div class="what-we-do">
+    <div class="sub-navigation--section what-we-do">
       <h2>What We Do</h2>
+      <i class="yellow-triangle">
+        <img src="/images/yellow-triangle.svg" alt="yellow triangle" />
+      </i>
       <ul>
         {% for page in site.pages %}
           {% if page.folder == 'what-we-do' %}
@@ -26,8 +32,11 @@
         {% endfor %}
       </ul>
     </div>
-    <div class="get-involved">
+    <div class="sub-navigation--section get-involved">
       <h2>Get Involved</h2>
+      <i class="yellow-triangle">
+        <img src="/images/yellow-triangle.svg" alt="yellow triangle" />
+      </i>
       <ul>
         {% for page in site.pages %}
           {% if page.folder == 'get-involved' %}
