@@ -2,6 +2,15 @@
   @extend %section
   background-color: $blue
   color: $white
+  @media screen and (min-width: $tablet)
+    display: flex
+    flex-direction: column
+    .photos
+      display: flex
+      justify-content: space-around
+      figure
+        width: 30%
+
   h2
     @extend %section-header
   h6
@@ -18,3 +27,7 @@
     height: 40px
     background-color: $white
     color: $blue
+    @media screen and (min-width: $tablet)
+      margin-top: 8%
+      width: 280px
+      align-self: center
