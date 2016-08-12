@@ -82,11 +82,16 @@ nav#sub-navigation
     font-size: 50px
     font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
     color: $white
+    @include media($small, $desktop)
+      font-size: 40px
   .sub-navigation__container
     margin: 0 8.333333333333333%
-    display: flex
     justify-content: space-around
+    display: flex
     flex: 1 1 auto
+    @include media($small, $desktop)
+      margin: 0 $space*3 0 $space
+      justify-content: space-between
   .sub-navigation--column
     display: flex
     flex-direction: column
