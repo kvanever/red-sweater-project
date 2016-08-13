@@ -2,22 +2,20 @@ footer.site-footer
   background-color: $black
   display: flex
   align-items: center
-  height: 100px
-  @extend %navigation-label
-  color: $white
-  line-height: 20px
+  justify-content: center
+  @extend %footer-text
   .site-footer__company-info
-    flex: 1 1 25%
-    justify-content: flex-start
-  nav
-    display: flex
-    flex: 1 1 50%
+    width: 25%
+    padding: $space 0
+    img
+      height: 24px
+      width: 70px
+  .site-footer__nav
+    width: 25%
+    height: 120px
     ul
-      height: 60px
-      width: 100%
       display: flex
-      flex-flow: column wrap
+      flex-flow: wrap
       li
-        margin-right: $space
-    .site-footer__nav--social-media
-      display: flex
+        width: 50%
+        padding-top: $space
