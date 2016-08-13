@@ -66,7 +66,7 @@ nav#sub-navigation
   height: 328px
   display: flex
   justify-content: center
-  // display: none
+  display: none
   @include media(0, $small)
     height: auto
     opacity: 1
@@ -135,6 +135,9 @@ nav#sub-navigation
       order: -1
   .contact
     position: relative
+    h2:hover
+      text-decoration: underline
+      cursor: pointer
     @include media(0, $small)
       padding-bottom: $space
   ul
@@ -145,6 +148,7 @@ nav#sub-navigation
     li
       margin-top: $space
   .contact-form
+    display: none
     background-color: $white
     opacity: 1
     border: 1px solid $light-gray
@@ -153,6 +157,12 @@ nav#sub-navigation
     top: 275px
     right: 0px
     width: 25%
+    .white-triangle
+      position: absolute
+      top: -14px
+      left: 25px
+      width: 30px
+      height: 15px
     form
       display: flex
       flex-direction: column
@@ -169,10 +179,16 @@ nav#sub-navigation
       border-radius: 5px
       margin-bottom: $space
       border: 1px solid $light-gray
+      &:focus
+        outline: none !important
+        border: 1px solid $yellow
     textarea
       height: 165px
       border-radius: 5px
       border: 1px solid $light-gray
+      &:focus
+        outline: none !important
+        border: 1px solid $yellow
     button#contact-form-submit-button
       margin-top: $space
       background-color: $blue
