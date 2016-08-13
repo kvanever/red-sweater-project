@@ -67,7 +67,7 @@ nav#sub-navigation
   height: 328px
   display: flex
   justify-content: center
-  display: none
+  // display: none
   @include media(0, $small)
     height: auto
     opacity: 1
@@ -135,6 +135,7 @@ nav#sub-navigation
     @include media(0, $small)
       order: -1
   .contact
+    position: relative
     @include media(0, $small)
       padding-bottom: $space
   ul
@@ -144,3 +145,29 @@ nav#sub-navigation
     font-size: 16px
     li
       margin-top: $space
+  .contact-form
+    background-color: $white
+    border: 1px solid $gray
+    border-radius: 3px
+    position: absolute
+    top: $space
+    right: 0px
+    width: 25%
+    form
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      padding: $space
+    label
+      color: $dark-gray
+      font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
+      font-weight: 400
+      font-size: 16px
+    input
+      height: 35px
+      border-radius: 3px
+      padding-bottom: $space
+    button
+      padding-top: $space
+      height: 35px
+      @extend %navigation-label
