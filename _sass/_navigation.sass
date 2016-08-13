@@ -154,15 +154,19 @@ nav#sub-navigation
     border: 1px solid $light-gray
     border-radius: 5px
     position: absolute
-    top: 275px
-    right: 0px
-    width: 25%
+    top: 80px
+    left: -30px
+    width: 306px
+    @include media($small, $desktop)
+      left: -180px
     .white-triangle
       position: absolute
       top: -14px
       left: 25px
       width: 30px
       height: 15px
+      @include media($small, $desktop)
+        left: 175px
     form
       display: flex
       flex-direction: column
