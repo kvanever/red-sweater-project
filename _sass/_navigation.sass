@@ -62,8 +62,7 @@ nav#sub-navigation
   top: 72px
   left: 0px
   width: 100%
-  background-color: $dark-gray
-  opacity: 0.9
+  background-color: transparentize($dark-gray, .1)
   height: 328px
   display: flex
   justify-content: center
@@ -135,6 +134,10 @@ nav#sub-navigation
     @include media(0, $small)
       order: -1
   .contact
+    position: relative
+    h2:hover
+      text-decoration: underline
+      cursor: pointer
     @include media(0, $small)
       padding-bottom: $space
   ul
@@ -144,3 +147,57 @@ nav#sub-navigation
     font-size: 16px
     li
       margin-top: $space
+  .contact-form
+    display: none
+    background-color: $white
+    opacity: 1
+    border: 1px solid $light-gray
+    border-radius: 5px
+    position: absolute
+    top: 80px
+    left: -30px
+    width: 306px
+    @include media($small, $desktop)
+      left: -180px
+    .white-triangle
+      position: absolute
+      top: -14px
+      left: 25px
+      width: 30px
+      height: 15px
+      @include media($small, $desktop)
+        left: 175px
+    form
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      padding: $space
+    label
+      color: $dark-gray
+      font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
+      font-weight: 400
+      font-size: 16px
+      margin-bottom: $space/2
+    input
+      height: 35px
+      border-radius: 5px
+      margin-bottom: $space
+      border: 1px solid $light-gray
+      &:focus
+        outline: none !important
+        border: 1px solid $yellow
+    textarea
+      height: 165px
+      border-radius: 5px
+      border: 1px solid $light-gray
+      &:focus
+        outline: none !important
+        border: 1px solid $yellow
+    button#contact-form-submit-button
+      margin-top: $space
+      background-color: $blue
+      height: 35px
+      @extend %navigation-label
+      color: $white
+      border-radius: 5px
+      border: none

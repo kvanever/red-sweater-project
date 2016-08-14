@@ -3,10 +3,12 @@
 $red: rgb(174, 50, 41)
 $blue: rgb(49, 119, 160)
 $yellow: rgb(253, 190, 22)
+$light-gray: rgb(221, 221, 219)
 $gray: rgb(111, 111, 110)
 $dark-gray: rgb(40, 40, 40)
 $white: rgb(255, 255, 255)
 $black: rgb(27, 27, 27)
+$shadow-black: #515151
 
 // BREAKPOINTS
 
@@ -17,7 +19,6 @@ $tablet: 768px
 $small: 630px
 $phone: 320px
 
-
 // FONTS
 
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700|Source+Sans+Pro:400,300,400italic,300italic,700,600,600italic,700italic,900)
@@ -27,10 +28,14 @@ $phone: 320px
 
 %title
   font-family: 'Amatic SC', cursive
-  font-size: 2em
+  font-size: 44pt
   line-height: 66px
-  color: #fffff
-  background-color: transparentize($black, .8)
+  color: $white
+  text-align: center
+  background-color: transparentize($shadow-black, .8)
+  @media screen and (min-width: $tablet)
+    font-size: 35pt
+    text-align: left
 
 %quote
   font-family: 'Amatic SC', cursive
@@ -49,8 +54,8 @@ $phone: 320px
   margin: 5% 0
 
 %paragraph
-  font-size: 16px
-  line-height: 22px
+  font-size: 22px
+  line-height: 25px
   font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
   font-weight: 400
   margin-bottom: 2%
@@ -70,11 +75,13 @@ $phone: 320px
 
 %ordered-list
   font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
-  font-weight: 400
-  font-size: 16px
-  line-height: 16px
+  font-weight: 500
+  font-size: 20px
+  line-height: 22px
   text-transform: uppercase
   margin-bottom: 2%
+  @media screen and (min-width: $tablet)
+    margin-top: 10%
 
 %split-box-header
   text-transform: uppercase
@@ -89,8 +96,6 @@ $phone: 320px
   line-height: 22px
   font-family: 'proxima-nova', 'Source Sans Pro', sans-serif
   font-weight: 600
-
-
 
 // LAYOUT
 
