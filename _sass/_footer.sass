@@ -3,14 +3,18 @@ footer.site-footer
   display: flex
   align-items: center
   @extend %footer-text
+  @include media(0, $tablet)
+    flex-wrap: wrap
   .site-footer__company-info
     width: 25%
     padding: $space 0 $space 8.33333333333%
     @include media($tablet, $medium)
       width: 33.333333333%
+      padding: $space
     @include media(0, $tablet)
       width: 100%
       text-align: center
+      padding: $space 0
     img
       height: 24px
       width: 70px
@@ -40,11 +44,13 @@ footer.site-footer
     justify-content: flex-end
     @include media($tablet, $medium)
       width: 33.333333333%
+      padding: $space
     @include media(0, $tablet)
       width: 100%
       display: flex
       justify-content: space-around
       height: 80px
+      padding: 0 8.333333333%
     a
       width: 30px
       height: 30px
